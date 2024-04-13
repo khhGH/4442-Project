@@ -1,0 +1,138 @@
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+div.bg-dark.p-5.rounded {
+    color: #ffffff; 
+    font-size: 18px; 
+    font-weight: bold; 
+    text-align: center; 
+    border-radius: 10cm;
+  }
+
+.btn-primary {
+    background-color: grey;
+    color: white;
+    border: 2px solid white;
+  }
+
+.btn-primary:hover {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    border: 2px solid rgb(0, 0, 0);
+  }
+
+.container {
+    display: flex;
+    align-items: top;
+    padding-top: 3%;
+    justify-content: center;
+  }
+  
+.vCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.vCenter .bg-dark {
+    width: 100%; 
+    white-space: nowrap; 
+  }
+
+
+.hNav {
+  background-color: #1e2024; 
+  display: flex;
+  justify-content: center;
+}
+
+.hNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+}
+
+.hNav li {
+  padding: 20px;
+}
+
+.hNav a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+
+.vNav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: #00000071;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.vNav li a {
+  display: block;
+  color: #ffffff;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.vNav li a.active {
+  background-color: #ffffff;
+  color: white;
+}
+
+.vNav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+
+
+
+
+
+
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.bd-placeholder-img-lg {
+    font-size: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.alert {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
