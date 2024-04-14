@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Driving Behavior Analysis System (Group 10)</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <style>
+      .container-main {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+      }
+      .form-select {
+        cursor: pointer;
+      }
+      .header {
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Group 10</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/summary">Summary Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/summary-graph">Visualize Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/driver"
+                >Driver Monitoring System</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container container-main">
+      <div class="bg-light p-5 rounded">
+        <form action="/monitor">
+          <h1 class="header">Select A Driver to Monitor</h1>
+          <select
+            class="form-select form-select-lg mb-3"
+            id="driverID"
+            name="driverID"
+            aria-label="Driver select"
+          >
+            <option selected value="zengpeng1000000">zengpeng1000000</option>
+            <option value="xiexiao1000001">xiexiao1000001</option>
+            <option value="hanhui1000002">hanhui1000002</option>
+            <option value="likun1000003">likun1000003</option>
+            <option value="shenxian1000004">shenxian1000004</option>
+            <option value="panxian1000005">panxian1000005</option>
+            <option value="xiezhi1000006">xiezhi1000006</option>
+            <option value="zouan1000007">zouan1000007</option>
+            <option value="haowei1000008">haowei1000008</option>
+            <option value="duxu1000009">duxu1000009</option>
+          </select>
+          <button class="btn btn-primary" type="submit">Monitor Driver</button>
+        </form>
+      </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+        <a class="btn btn-secondary" href="/" role="button"
+          >Back to Home Page</a
+        >
+      </div>
+    </main>
+  </body>
+</html>
