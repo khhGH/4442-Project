@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Driving Behavior Analysis System (Group 10)</title>
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static',filename='style.css') }}"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Group 10</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/summary">Summary Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/summary-graph">Visualize Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/driver">Driver Monitoring System</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="bg-light p-5 rounded">
+      <table class="table table-striped table-hover">
+          <thead>
+            <th>Driver ID</th>
+            <th>Car Plate Number</th>
+            <th>Number of Overspeed</th>
+            <th>Total Overspeed Time</th> 
+            <th>Number of Fatigue Driving</th>
+            <th>Number of Neutral Slides</th> 
+            <th>Total Neutral Slide Time</th>
+            <th>Number of Rapid Accelerations</th> 
+            <th>Number of Rapid Decelerations</th>
+            <th>Number of Hthrottle Stops</th>
+            <th>Number of Oil Leaks</th> 
+          </thead>
+          <tbody>
+            {% for item in summary %}
+            <tr>
+              <td>{{ item.driverID }}</td>
+              <td>{{ item.carPlateNumber }}</td>
+              <td>{{ item.num_overspeed }}</td>
+              <td>{{ item.total_overspeed_time }}</td>
+              <td>{{ item.num_fatigue_driving }}</td>
+              <td>{{ item.num_neutral_slide }}</td>
+              <td>{{ item.total_neutral_slide_time }}</td>
+              <td>{{ item.num_rapidly_speedup }}</td>
+              <td>{{ item.num_rapidly_slowdown }}</td>
+              <td>{{ item.num_hthrottle_stop }}</td>
+              <td>{{ item.num_oil_leak }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+
+    
+    
+    
+  </body>
+</html>
